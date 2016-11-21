@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>contentEditable属性</title>
+		<style type="text/css">
+			*[hidden]{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>contentEditable属性</h2>
+		<div contenteditable="true">
+			Hello contentEditable
+		</div>
+		<button onclick="">加粗</button><button>加斜</button>
+		
+		<div hidden="hidden">
+			Hello Hidden
+		</div>
+		<div id="div1">div1</div>
+		<script type="text/javascript">
+			var div1=document.querySelector("body #div1");
+			div1.innerHTML+=" +++";
+		</script>
+	</body>
+</html>

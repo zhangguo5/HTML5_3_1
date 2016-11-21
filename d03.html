@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>data-*</title>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<h2>data-*</h2>
+		<div id="div1" data-student-name="Tom" data-stu='{"a":1,"b":2}'></div>
+		<button onclick="addData()">添加数据</button>
+		<button onclick="getData()">获取数据</button>
+		<script type="text/javascript">
+			var div1=document.getElementById("div1");
+		    function addData()
+		    {
+		    	//给div1添加属性data-student-name，值为rose
+		    	div1.setAttribute("data-student-name","Rose");
+		    	$("#div1").data("stu-mark","99分");
+		    }
+			function getData()
+			{
+				//原生JavaScript
+				//alert(div1.getAttribute("data-student-name"));
+				
+				//jQuery
+				alert($("#div1").data("student-name"));
+				alert($("#div1").data("stu").a);
+				alert($("#div1").data("stu-mark"));
+			}
+			
+			
+			var x="{a:1}";
+			alert(eval("("+x+")").a);
+		</script>
+	</body>
+</html>
