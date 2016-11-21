@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5新的表单元素</title>
+	</head>
+
+	<body>
+		<h2>HTML5新的表单元素</h2>
+		<form>
+			<p>
+				<label>姓名：</label>
+				<input type="text" required="required"/>
+			</p>
+			<p>
+				<label>相片：</label>
+				<input type="file" multiple="multiple"/>
+			</p>
+			<p>
+				<label>帐号：</label>
+				<input type="text" name="username" autocomplete="on" required="required" pattern="^[0-9a-zA-Z]{6,16}$" />请输入a-zA-Z0-9且长度6-16位的字符
+			</p>
+			<p>
+				<label>邮箱：</label>
+				<input type="email" name="mail" id="mail" value="" placeholder="请输入邮箱"/>
+			</p>
+			<p>
+				<label>博客：</label>
+				<input type="url" name="blog" id="blog" value="" required="required" autofocus="autofocus"/>
+			</p>
+			<p>
+				<label>生日：</label>
+				<input type="date">
+			</p>
+			<p>
+				<label>身高：</label>
+				<input type="number" max="226" min="80" step="10" value="170" />
+			</p>
+			<p>
+				<label>肤色：</label>
+				<input type="color" onchange="document.bgColor=this.value" />
+			</p>
+			<p>
+				<label>体重：</label>
+				<input type="range" max="500" min="30" step="5" value="65" onchange="showValue(this.value)"/>
+				<span id="rangeValue"></span>
+			</p>
+			<button formnovalidate="formnovalidate">提交</button>
+			<script type="text/javascript">
+				function showValue(val){
+					document.getElementById("rangeValue").innerHTML=val;
+				}
+			</script>
+		</form>
+	</body>
+
+</html>
